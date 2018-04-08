@@ -42,7 +42,8 @@ Run: `chmod 700 /home/grader/.ssh` <br />
 Run: `chmod 644 /home/grader/.ssh/authorized_keys` <br />
 Run: `sudo service ssh restart`
 
-#### Configure local timezoe
+#### Configure local timezone
+Run: `sudo dpkg-reconfigure tzdata` and select UTC
 
 #### Install Apache and mod_wsgi
 
