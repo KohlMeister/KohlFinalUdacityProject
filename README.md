@@ -14,11 +14,11 @@ You will take a baseline installation of a Linux distribution on a virtual machi
 ### Software Installed and Configuration Changes
 
 #### Update currently installed packages
-Run: `sudo apt-get update`
+Run: `sudo apt-get update` <br />
 Run: `sudo apt-get upgrade`
 
 #### Configure SSH port
-Run: `sudo nano /etc/ssh/sshd_config`
+Run: `sudo nano /etc/ssh/sshd_config` <br />
 Update line ~5 from `Port 22` to `Port 2200`
 
 #### Configure Uncomplicated Firewall
