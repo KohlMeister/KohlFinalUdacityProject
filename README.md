@@ -40,12 +40,19 @@ Run: `touch /home/grader/.ssh/authorized_keys` <br />
 Run: `nano /home/grader/.ssh/authorized_keys` and copy locally created key<br />
 Run: `chmod 700 /home/grader/.ssh` <br />
 Run: `chmod 644 /home/grader/.ssh/authorized_keys` <br />
-Run: `sudo service ssh restart`
+Run: `sudo service ssh restart`sudo a
 
 #### Configure local timezone
 Run: `sudo dpkg-reconfigure tzdata` and select UTC
 
+#### Remove ability to login as root remotely
+Run: `sudo nano /etc/ssh/sshd_config` <br />
+Update `PermitRootLogin prohibit-password` to `PermitRootLogin no`
+
 #### Install Apache and mod_wsgi
+Run: `sudo apt-get install apache2` <br />
+Run: `sudo apt-get install python-setuptools libapache2-mod-wsgi` <br />
+Run: `sudo service apache2 restart`
 
 #### Install and Configure PostgreSQL
 
