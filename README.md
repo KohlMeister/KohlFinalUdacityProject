@@ -40,7 +40,7 @@ Run: `touch /home/grader/.ssh/authorized_keys` <br />
 Run: `nano /home/grader/.ssh/authorized_keys` and copy locally created key<br />
 Run: `chmod 700 /home/grader/.ssh` <br />
 Run: `chmod 644 /home/grader/.ssh/authorized_keys` <br />
-Run: `sudo service ssh restart`sudo a
+Run: `sudo service ssh restart`
 
 #### Configure local timezone
 Run: `sudo dpkg-reconfigure tzdata` and select UTC
@@ -55,8 +55,10 @@ Run: `sudo apt-get install python-setuptools libapache2-mod-wsgi` <br />
 Run: `sudo service apache2 restart`
 
 #### Install and Configure PostgreSQL
+Run: `sudo apt-get install postgresql postgresql-contrib`
 
 #### Install git
+Run: `sudo apt-get install git`
 
 #### Clone Item Catalog Project
 
