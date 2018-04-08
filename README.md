@@ -61,9 +61,24 @@ Run: `sudo apt-get install postgresql postgresql-contrib`
 Run: `sudo apt-get install git`
 
 #### Clone Item Catalog Project
+Run: `sudo mkdir /var/www/itemCatalog` <br />
+Run: `sudo git clone https://github.com/KohlMeister/Udacity_Drink_Catalog`
 
 #### Changes make to ensure app functions correctly
 
+##### Install Flask and Associated Libraries
+Run: `sudo mv catalog_website.py __init__.py` <br />
+Run: `sudo apt-get install python-pip` <br />
+Run: `sudo pip install virtualenv` <br />
+Run: `sudo virtualenv venv` <br />
+Run: `source venv/bin/activate` <br />
+Run: `sudo pip install Flask` <br />
+Run: `sudo pip install httplib2` <br />
+Run: `sudo pip install oauth2client` <br />
+Run: `sudo pip install sqlalchemy` <br />
+Run: `sudo pip install psycopg2` <br />
+Run: `sudo pip install passlib` <br />
+Run: `sudo pip install requests` <br />
 
 ### Third Party Resources
 
