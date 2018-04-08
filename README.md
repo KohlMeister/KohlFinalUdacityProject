@@ -28,6 +28,9 @@ Run: `sudo ufw allow 123/udp` <br />
 Run: `sudo ufw enable`
 
 #### Add user 'grader'
+Run: `sudo adduser grader` <br />
+Run: `sudo nano /etc/sudoers.d/grader` <br />
+Add line `grader ALL=(ALL) NOPASSWD:ALL`
 
 #### Create SSH key pair
 
