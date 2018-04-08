@@ -12,12 +12,14 @@ You will take a baseline installation of a Linux distribution on a virtual machi
 * Third Party Resources: Below
 
 ### Software Installed and Configuration Changes
-Run: `sudo apt-get update`
 
 #### Update currently installed packages
-Run `sudo apt-get upgrade`
+Run: `sudo apt-get update`
+Run: `sudo apt-get upgrade`
 
 #### Configure SSH port
+Run: `sudo nano /etc/ssh/sshd_config`
+Update line ~5 from `Port 22` to `Port 2200`
 
 #### Configure Uncomplicated Firewall
 
