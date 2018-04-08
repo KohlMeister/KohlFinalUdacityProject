@@ -12,8 +12,10 @@ You will take a baseline installation of a Linux distribution on a virtual machi
 * Third Party Resources: Below
 
 ### Software Installed and Configuration Changes
+Run: `sudo apt-get update`
 
 #### Update currently installed packages
+Run `sudo apt-get upgrade`
 
 #### Configure SSH port
 
