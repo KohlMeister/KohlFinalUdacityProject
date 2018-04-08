@@ -17,3 +17,4 @@ You will take a baseline installation of a Linux distribution on a virtual machi
 
 ### Third Party Resources
 
+* [Deploy Flask App with Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
