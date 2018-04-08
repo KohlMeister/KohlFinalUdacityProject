@@ -5,16 +5,37 @@ You will take a baseline installation of a Linux distribution on a virtual machi
 
 ## Submission Requirements
 
-* IP Address:
-* SSH Port:
-* Application URL:
+* IP Address: 34.214.113.147
+* SSH Port: 2200
+* Application URL: 
 * Software installed and configuration changes: Below
 * Third Party Resources: Below
 
 ### Software Installed and Configuration Changes
 
+#### Update currently installed packages
+
+#### Configure SSH port
+
+#### Configure Uncomplicated Firewall
+
+#### Add user 'grader'
+
+#### Create SSH key pair
+
+#### Configure local timezoe
+
+#### Install Apache and mod_wsgi
+
+#### Install and Configure PostgreSQL
+
+#### Install git
+
+#### Clone Item Catalog Project
+
+#### Changes make to ensure app functions correctly
 
 
 ### Third Party Resources
 
-* [Deploy Flask App with Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
+* [Deploy Flask App with Ubuntu - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
