@@ -22,6 +22,10 @@ Run: `sudo nano /etc/ssh/sshd_config` <br />
 Update line ~5 from `Port 22` to `Port 2200`
 
 #### Configure Uncomplicated Firewall
+Run: `sudo ufw allow 2200/tcp` <br />
+Run: `sudo ufw allow 80/tcp` <br />
+Run: `sudo ufw allow 123/udp` <br />
+Run: `sudo ufw enable`
 
 #### Add user 'grader'
 
