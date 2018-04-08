@@ -55,7 +55,9 @@ Run: `sudo apt-get install python-setuptools libapache2-mod-wsgi` <br />
 Run: `sudo service apache2 restart`
 
 #### Install and Configure PostgreSQL
-Run: `sudo apt-get install postgresql postgresql-contrib`
+Run: `sudo apt-get install postgresql postgresql-contrib` <br />
+Run: `sudo -u postgres createusr -P catalog` <br />
+Run: `sudo -u postgres createdb -O catalog catalog`
 
 #### Install git
 Run: `sudo apt-get install git`
@@ -78,7 +80,10 @@ Run: `sudo pip install oauth2client` <br />
 Run: `sudo pip install sqlalchemy` <br />
 Run: `sudo pip install psycopg2` <br />
 Run: `sudo pip install passlib` <br />
-Run: `sudo pip install requests` <br />
+Run: `sudo pip install requests`
+
+##### Configure and enable new virtual host
+
 
 ### Third Party Resources
 
