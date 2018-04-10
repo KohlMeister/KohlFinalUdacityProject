@@ -36,11 +36,17 @@ Add line `grader ALL=(ALL) NOPASSWD:ALL`
 Run: `ssh-keygen` locally using git bash <br />
 Then on VM: <br />
 Run: `sudo mkdir /home/grader/.ssh` <br />
-Run: `touch /home/grader/.ssh/authorized_keys` <br />
-Run: `nano /home/grader/.ssh/authorized_keys` and copy locally created key<br />
-Run: `chmod 700 /home/grader/.ssh` <br />
-Run: `chmod 644 /home/grader/.ssh/authorized_keys` <br />
-Run: `sudo service ssh restart`
+Run: `sudo touch /home/grader/.ssh/authorized_keys` <br />
+Run: `sudo nano /home/grader/.ssh/authorized_keys` and copy locally created key<br />
+Run: `sudo chmod 700 /home/grader/.ssh` <br />
+Run: `sudo chmod 644 /home/grader/.ssh/authorized_keys` <br />
+Run: `sudo service ssh restart` <br />
+
+Ensure owner and group are grader: <br />
+Run: `sudo chown grader /home/grader/.ssh` <br />
+Run: `sudo chgrp grader /home/grader/.ssh` <br />
+Run: `sudo chown grader /home/grader/.ssh/authorized_keys` <br />
+Run: `sudo chgrp grader /home/grader/.ssh/authorized_keys`
 
 #### Configure local timezone
 Run: `sudo dpkg-reconfigure tzdata` and select UTC
