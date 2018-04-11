@@ -118,13 +118,19 @@ Add to file: <br />
 		CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
-Run: `` <br />
-Run: `` <br />
-Run: `` <br />
-Run: `` <br />
-Run: `` <br />
-Run: `` <br />
+Run: `sudo nano /var/www/catalog/catalog.wsgi` <br />
+Add to file: <br />
+```python
+#!/usr/bin/python
+import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0,"/var/www/catalog/")
 
+from catalog import app as application
+application.secret_key = 'Add your secret key'
+```
+Run: `sudo service apache2 restart` <br />
 
 ##### Install Flask and Associated Libraries
 Clone Item Catalog Project
