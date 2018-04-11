@@ -98,11 +98,11 @@ Run: `deactivate`
 <br /><br />
 Run: `sudo nano /etc/apache2/sites-available/catalog.conf` <br />
 Add to file: <br />
-``
+```xml
 <VirtualHost *:80>
 		ServerName 52.25.3.13
 		ServerAdmin admin@52.25.3.13
-    ServerAlias http://ec2-52-25-3-13.us-west-2.compute.amazonaws.com
+    		ServerAlias http://ec2-52-25-3-13.us-west-2.compute.amazonaws.com
 		WSGIScriptAlias / /var/www/catalog/catalog.wsgi
 		<Directory /var/www/catalog/catalog/>
 			Order allow,deny
@@ -117,7 +117,7 @@ Add to file: <br />
 		LogLevel warn
 		CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-``
+```
 Run: `` <br />
 Run: `` <br />
 Run: `` <br />
