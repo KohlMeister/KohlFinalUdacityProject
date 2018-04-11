@@ -79,15 +79,15 @@ Run: `cd catalog/catalog` <br />
 Run: `sudo mkdir static templates` <br />
 Run: `sudo nano __init__.py` <br />
 Add to file: <br />
-``
-from flask import Flask<br />
-app = Flask(__name__)<br />
-@app.route("/")<br />
-def hello():<br />
-    return "Hello, I love Digital Ocean!"<br />
-if __name__ == "__main__":<br />
+```python
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def hello():
+    return "Hello, I love Digital Ocean!"
+if __name__ == "__main__":
     app.run()
-``
+```
 Run: `sudo apt-get install python-pip` <br />
 Run: `sudo pip install virtualenv` <br />
 Run: `sudo virtualenv venv` <br />
@@ -99,23 +99,23 @@ Run: `deactivate`
 Run: `sudo nano /etc/apache2/sites-available/catalog.conf` <br />
 Add to file: <br />
 ``
-<VirtualHost *:80><br />
-		ServerName 52.25.3.13<br />
-		ServerAdmin admin@52.25.3.13<br />
-    ServerAlias http://ec2-52-25-3-13.us-west-2.compute.amazonaws.com<br />
-		WSGIScriptAlias / /var/www/catalog/catalog.wsgi<br />
-		<Directory /var/www/catalog/catalog/><br />
-			Order allow,deny<br />
-			Allow from all<br />
-		</Directory><br />
-		Alias /static /var/www/catalog/catalog/static<br />
-		<Directory /var/www/catalog/catalog/static/><br />
-			Order allow,deny<br />
-			Allow from all<br />
-		</Directory><br />
-		ErrorLog ${APACHE_LOG_DIR}/error.log<br />
-		LogLevel warn<br />
-		CustomLog ${APACHE_LOG_DIR}/access.log combined<br />
+<VirtualHost *:80>
+		ServerName 52.25.3.13
+		ServerAdmin admin@52.25.3.13
+    ServerAlias http://ec2-52-25-3-13.us-west-2.compute.amazonaws.com
+		WSGIScriptAlias / /var/www/catalog/catalog.wsgi
+		<Directory /var/www/catalog/catalog/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		Alias /static /var/www/catalog/catalog/static
+		<Directory /var/www/catalog/catalog/static/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		LogLevel warn
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ``
 Run: `` <br />
