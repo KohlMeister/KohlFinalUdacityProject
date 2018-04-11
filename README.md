@@ -147,12 +147,12 @@ Run: `sudo pip install requests` <br />
 Run: `sudo nano database_setup.py` <br />
 Update engine: 
 ```python 
-python engine = create_engine('postgresql://catalog:PW-FOR-DB@localhost/catalog')
+python engine = create_engine('postgresql://catalog:pwzz@localhost/catalog')
 ```
 Run: `sudo nano __init__.py` <br />
 Update engine: 
 ```python
-python engine = create_engine('postgresql://catalog:PW-FOR-DB@localhost/catalog')
+python engine = create_engine('postgresql://catalog:pwzz@localhost/catalog')
 ```
 Update .json in /gconnect and top of file: `/var/www/catalog/catalog/json_secrets.json` <br />
 
@@ -160,7 +160,7 @@ Update .json in /gconnect and top of file: `/var/www/catalog/catalog/json_secret
 Run: `sudo apt-get install postgresql-server`
 Run: `sudo su - postgre` <br />
 Run: `psql` <br />
-Run: `CREATE USER catalog WITH PASSWORD 'PW-FOR-DB';` <br />
+Run: `CREATE USER catalog WITH PASSWORD 'pwzz';` <br />
 Run: `ALTER USER catalog CREATEDB;` <br />
 Run: `CREATE DATABASE catalog WITH OWNER catalog;` <br />
 Run: `\c catalog` <br />
