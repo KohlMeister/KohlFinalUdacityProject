@@ -60,10 +60,8 @@ Run: `sudo apt-get install apache2` <br />
 Run: `sudo apt-get install python-setuptools libapache2-mod-wsgi` <br />
 Run: `sudo service apache2 restart`
 
-#### Install and Configure PostgreSQL
+#### Install Postgresql
 Run: `sudo apt-get install postgresql postgresql-contrib` <br />
-//Run: `sudo -u postgres createusr -P catalog` <br />
-//Run: `sudo -u postgres createdb -O catalog catalog`
 
 #### Install git
 Run: `sudo apt-get install git`
@@ -134,15 +132,27 @@ Run: `sudo service apache2 restart` <br />
 
 ##### Install Flask and Associated Libraries
 Clone Item Catalog Project
-Run: `sudo git clone https://github.com/KohlMeister/Udacity_Drink_Catalog`
-Run: `sudo `
+Run: `source venv/bin/activate` <br />
+Run: `sudo git clone https://github.com/KohlMeister/Udacity_Drink_Catalog` <br />
+Run: `sudo mv -v /var/www/catalog/catalog/Udacity_Drink_Catalog/* /var/www/catalog/catalog` <br />
+Run: `sudo rm -r Udacity_Drink_Catalog` <br />
+Run: `sudo rm -r __init__.py` <br />
 Run: `sudo mv catalog_website.py __init__.py` <br />
 Run: `sudo pip install httplib2` <br />
 Run: `sudo pip install oauth2client` <br />
 Run: `sudo pip install sqlalchemy` <br />
 Run: `sudo pip install psycopg2` <br />
 Run: `sudo pip install passlib` <br />
-Run: `sudo pip install requests`
+Run: `sudo pip install requests` <br />
+Run: `sudo nano database_setup.py` <br />
+Update engine: ```python python engine = create_engine('postgresql://catalog:PW-FOR-DB@localhost/catalog')``` <br />
+Run: `sudo nano __init__.py` <br />
+Update engine: `python engine = create_engine('postgresql://catalog:PW-FOR-DB@localhost/catalog')` <br />
+Update .json in /gconnect and top of file: `/var/www/catalog/catalog/json_secrets.json` <br />
+Run: `` <br />
+Run: `` <br />
+Run: `` <br />
+Run: `` <br />
 
 
 
