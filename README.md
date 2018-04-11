@@ -155,12 +155,25 @@ Update engine:
 python engine = create_engine('postgresql://catalog:PW-FOR-DB@localhost/catalog')
 ```
 Update .json in /gconnect and top of file: `/var/www/catalog/catalog/json_secrets.json` <br />
-Run: `` <br />
-Run: `` <br />
-Run: `` <br />
-Run: `` <br />
 
+#### Configure Postgresql
+Run: `sudo apt-get install postgresql-server`
+Run: `sudo su - postgre` <br />
+Run: `psql` <br />
+Run: `CREATE USER catalog WITH PASSWORD 'PW-FOR-DB';` <br />
+Run: `ALTER USER catalog CREATEDB;` <br />
+Run: `CREATE DATABASE catalog WITH OWNER catalog;` <br />
+Run: `\c catalog` <br />
+Run: `REVOKE ALL ON SCHEMA public FROM public;` <br />
+Run: `GRANT ALL ON SCHEMA public TO catalog;` <br />
+Run: `\q` <br />
+Run: `exit` <br />
+Run: `python database_setup.py` <br />
+Run: `sudo service apache2 restart` <br />
 
+Run: `sudo tail -50 /var/log/apache2/error.log` many times to debug errors :) <br />
+
+Update Google Oauth credentials
 
 ### Third Party Resources
 
