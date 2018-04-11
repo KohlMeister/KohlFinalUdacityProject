@@ -5,9 +5,9 @@ You will take a baseline installation of a Linux distribution on a virtual machi
 
 ## Submission Requirements
 
-* IP Address: 34.214.113.147
+* IP Address: 52.25.3.13
 * SSH Port: 2200
-* Application URL: 
+* Application URL: http://ec2-52-25-3-13.us-west-2.compute.amazonaws.com
 * Software installed and configuration changes: Below
 * Third Party Resources: Below
 
