@@ -145,9 +145,15 @@ Run: `sudo pip install psycopg2` <br />
 Run: `sudo pip install passlib` <br />
 Run: `sudo pip install requests` <br />
 Run: `sudo nano database_setup.py` <br />
-Update engine: ```python python engine = create_engine('postgresql://catalog:PW-FOR-DB@localhost/catalog')``` <br />
+Update engine: 
+```python 
+python engine = create_engine('postgresql://catalog:PW-FOR-DB@localhost/catalog')
+```
 Run: `sudo nano __init__.py` <br />
-Update engine: `python engine = create_engine('postgresql://catalog:PW-FOR-DB@localhost/catalog')` <br />
+Update engine: 
+```python
+python engine = create_engine('postgresql://catalog:PW-FOR-DB@localhost/catalog')
+```
 Update .json in /gconnect and top of file: `/var/www/catalog/catalog/json_secrets.json` <br />
 Run: `` <br />
 Run: `` <br />
